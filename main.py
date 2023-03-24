@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import List
 
 @dataclass
 
@@ -11,4 +12,6 @@ class Elemento:
         return False
 
 class Conjunto:
+    def __init__(self):
+        self.elementos = list[Elemento] = []
 
