@@ -14,7 +14,7 @@ class Elemento:
 class Conjunto:
     contador = 0
     def __init__(self):
-        self.elementos = list[Elemento] = []
+        self.elementos = List[Elemento] = []
         nombre: str = ""
         self._id = self.__class__.contador
         self.__class__.contador += 1
@@ -49,3 +49,9 @@ class Conjunto:
         nombre_conjunto = f"{conjunto1.nombre} INTERSECTADO {conjunto2.nombre}"
         resultado = cls(elementos_interseccion, nombre_conjunto)
         return resultado
+
+    def __str__(self):
+        nombres_elementos = ", ".join([elemento.nombre for elemento in self.elementos])
+        return f"Conjunto {self.nombre}: ({nombres_elementos})"
+
+
