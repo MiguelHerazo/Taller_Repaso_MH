@@ -23,3 +23,9 @@ class Conjunto:
     def id(self):
         return self._id
 
+    def contiene(self, elemento : Elemento) -> bool:
+        for e in self.elementos:
+            if e.nombre == elemento.nombre:
+                return True
+        return False
+
