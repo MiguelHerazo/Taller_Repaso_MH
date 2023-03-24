@@ -42,4 +42,3 @@ class Conjunto:
         nuevo_conjunto.unir(self)
         nuevo_conjunto.unir(otro_conjunto)
         return nuevo_conjunto
-
