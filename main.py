@@ -12,7 +12,14 @@ class Elemento:
         return False
 
 class Conjunto:
+    contador = 0
     def __init__(self):
         self.elementos = list[Elemento] = []
         nombre: str = ""
+        self._id = self.__class__.contador
+        self.__class__.contador += 1
+
+    @property
+    def id(self):
+        return self._id
 
