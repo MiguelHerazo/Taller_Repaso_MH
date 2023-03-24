@@ -17,7 +17,7 @@ class Conjunto:
         self.elementos = List[Elemento] = []
         nombre: str = ""
         self._id = self.__class__.contador
-        self.__class__.contador += 1
+        self.contador += 1
 
     @property
     def id(self):
