@@ -14,4 +14,5 @@ class Elemento:
 class Conjunto:
     def __init__(self):
         self.elementos = list[Elemento] = []
+        nombre: str = ""
 
