@@ -29,3 +29,17 @@ class Conjunto:
                 return True
         return False
 
+    def agregar_elemento(self, elemento: Elemento):
+        if not self.contiene(elemento):
+            self.elementos.append(elemento)
+
+    def unir(self, otro_conjunto):
+        for elemento in otro_conjunto.elementos:
+            self.agregar_elemento(elemento)
+
+    def __add__(self, otro_conjunto):
+        nuevo_conjunto = Conjunto()
+        nuevo_conjunto.unir(self)
+        nuevo_conjunto.unir(otro_conjunto)
+        return nuevo_conjunto
+
